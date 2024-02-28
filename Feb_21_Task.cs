@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
-namespace Feb_21_Task;
+namespace DotNetInterns;
 
-class Program
+class Feb_21_Task
 {
-    static void Main(string[] args)
+    public static void tasks()
     {
         int tasks = 0;
         
@@ -95,41 +95,41 @@ class Program
         int day;
         Console.Write("Enter day number: ");
         day = Convert.ToInt32(Console.ReadLine());
-
-        switch(day)
-        {
-            case 1:
-                //Console.WriteLine("Monday");
-                Console.WriteLine(Days.Monday);
-                break;
-            case 2:
-                //Console.WriteLine("Tuesday");
-                Console.WriteLine(Days.Tuesday);
-                break;
-            case 3:
-                //Console.WriteLine("Wednesday");
-                Console.WriteLine(Days.Wednesday);
-                break;
-            case 4:
-                //Console.WriteLine("Thursday");
-                Console.WriteLine(Days.Thursday);
-                break;
-            case 5:
-                //Console.WriteLine("Friday");
-                Console.WriteLine(Days.Friday);
-                break;
-            case 6:
-                //Console.WriteLine("Saturday");
-                Console.WriteLine(Days.Saturday);
-                break;
-            case 7:
-                //Console.WriteLine("Sunday");
-                Console.WriteLine(Days.Sunday);
-                break;
-            default:
-                //Console.WriteLine("Enter a valid day number.");
-                break;
-        }
+        //Console.WriteLine((Days).day);
+        // switch(day)
+        // {
+        //     case 1:
+        //         //Console.WriteLine("Monday");
+        //         Console.WriteLine(Days.Monday);
+        //         break;
+        //     case 2:
+        //         //Console.WriteLine("Tuesday");
+        //         Console.WriteLine(Days.Tuesday);
+        //         break;
+        //     case 3:
+        //         //Console.WriteLine("Wednesday");
+        //         Console.WriteLine(Days.Wednesday);
+        //         break;
+        //     case 4:
+        //         //Console.WriteLine("Thursday");
+        //         Console.WriteLine(Days.Thursday);
+        //         break;
+        //     case 5:
+        //         //Console.WriteLine("Friday");
+        //         Console.WriteLine(Days.Friday);
+        //         break;
+        //     case 6:
+        //         //Console.WriteLine("Saturday");
+        //         Console.WriteLine(Days.Saturday);
+        //         break;
+        //     case 7:
+        //         //Console.WriteLine("Sunday");
+        //         Console.WriteLine(Days.Sunday);
+        //         break;
+        //     default:
+        //         //Console.WriteLine("Enter a valid day number.");
+        //         break;
+        // }
         Console.WriteLine("***************************************");
     }
 }

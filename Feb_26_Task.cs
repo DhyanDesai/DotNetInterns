@@ -1,10 +1,10 @@
-﻿using System.Text;
+using System.Text;
 
-namespace Feb_26_Task;
+namespace DotNetInterns;
 
-class Program
+class Feb_26_Task
 {
-    static void Main(string[] args)
+    public static void tasks()
     {
         int tasks = 0;
         
