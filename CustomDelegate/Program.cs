@@ -40,7 +40,7 @@ namespace CustomDelegateDemo
 
         public static bool CheckLength(string name)
         {
-            if (name.Length > 3)            //predicate
+            if (name.Length > 5)            //predicate
                 return true;
             else
                 return false;

@@ -33,7 +33,7 @@ namespace GenericDelegateDemo
 
         public static bool CheckLength(string name)
         {
-            if (name.Length > 3)
+            if (name.Length > 5)
                 return true;
             else
                 return false;
