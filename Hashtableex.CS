@@ -12,10 +12,7 @@ namespace DotNetInterns
             System.Console.WriteLine("Elements:");
             foreach (DictionaryEntry item in ht1)
             {
-                // System.Console.WriteLine($"Key: {item.Key},Value:{item.Value}");
-                // System.Console.WriteLine($"Key: {item.Key},Value:{item.Value}");
-                // System.Console.WriteLine($"Key: {item.Key},Value:{item.Value}");
-                // System.Console.WriteLine($"Key: {item.Key},Value:{item.Value}");
+                System.Console.WriteLine($"Key: {item.Key},Value:{item.Value}");
             }
         }
     }
