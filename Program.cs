@@ -1,5 +1,7 @@
-﻿namespace DotNetInterns;
-using PracticePrograms;
+﻿
+
+
+namespace PracticePrograms;
 
 //  DELEGATES DECALRE:
 public delegate void delegateHandler(string abc);
@@ -23,18 +25,18 @@ public class Program
 
 
 
-        delegateHandler obj = new delegateHandler(SingleMultiDelegates.PrintName);
-            obj.Invoke("kirtan");
+        // delegateHandler obj = new delegateHandler(SingleMultiDelegates.PrintName);
+        //     obj.Invoke("kirtan");
 
         // MulticastDelegate
 
-        doubleDelegate d1 = new doubleDelegate(SingleMultiDelegates.addition);
+        // doubleDelegate d1 = new doubleDelegate(SingleMultiDelegates.addition);
 
-        d1 += SingleMultiDelegates.subtrac;
-        d1 += SingleMultiDelegates.multi;
-        d1 += SingleMultiDelegates.division;
+        // d1 += SingleMultiDelegates.subtrac;
+        // d1 += SingleMultiDelegates.multi;
+        // d1 += SingleMultiDelegates.division;
 
-        d1.Invoke(45, 9);
+        // d1.Invoke(45, 9);
 
 
 
@@ -44,52 +46,54 @@ public class Program
 
 
 
-        Func<int, double, double> r1 = new Func<int, double, double>(GenericDelegateProgram.addnum);
-        Console.WriteLine(r1.Invoke(45, 454.154));
+        // Func<int, double, double> r1 = new Func<int, double, double>(GenericDelegateProgram.addnum);
+        // Console.WriteLine(r1.Invoke(45, 454.154));
 
-        Action<int, int, int> r2 = new Action<int, int, int>(GenericDelegateProgram.modulonumber);
-        r2.Invoke(15, 10, 85);
+        // Action<int, int, int> r2 = new Action<int, int, int>(GenericDelegateProgram.modulonumber);
+        // r2.Invoke(15, 10, 85);
 
-        Predicate<string> r3 = new Predicate<string>(GenericDelegateProgram.name);
-        Console.WriteLine("Even number name: " + r3.Invoke("kirtan"));
+        // Predicate<string> r3 = new Predicate<string>(GenericDelegateProgram.name);
+        // Console.WriteLine("Even number name: " + r3.Invoke("kirtan"));
 
 
         // AnonymousProgram  ===> METHOD WITHPOUT NAME
 
-        nameDelegates a1 = delegate (string names) {
+        // nameDelegates a1 = delegate (string names) {
 
-            Console.WriteLine($"happy birthday {names}" );
-           return "hey, enjoy";
+        //     Console.WriteLine($"happy birthday {names}" );
+        //    return "hey, enjoy";
             
 
-        };
+        // };
 
-        Console.WriteLine( a1.Invoke("kirtan patel"));
+        // Console.WriteLine( a1.Invoke("kirtan patel"));
 
 
         // Lambda Expression using anonymous method
 
-         nameDelegates a2 = (names) => {
+        //  nameDelegates a1 = (names) => {
 
-            Console.WriteLine($"happy birthday {names}" );
-           return "hey, enjoy";
+        //     Console.WriteLine($"happy birthday {names}" );
+        //    return "hey, enjoy";
             
 
-        };
+        // };
 
-        Console.WriteLine( a2.Invoke("kirtan patel"));
-
-
+        // Console.WriteLine( a1.Invoke("kirtan patel"));
 
 
 
-    int a= 44;
+
+            // EVENT
 
 
+        // EventRaising e1 = new EventRaising();
+        // e1.Dowork(5,"work compalete yet?");
+
+        Listprogram.CURDOperation();
 
 
 
     }
 
 }
-
