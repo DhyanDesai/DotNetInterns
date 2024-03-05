@@ -11,7 +11,7 @@ namespace DotNetInterns
         public void DoWork(int Hours,string WorkType){
             for(int i=0;i<Hours;i++){
                 OnWorkPerformed(i+1,WorkType);
-                //Thread.Sleep(3000);
+                Thread.Sleep(3000);
             }
             OnComplete();
         }
