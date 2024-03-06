@@ -49,11 +49,11 @@ class Program
         //   FileHandeling.Create_File();
      //Write Into Existing File
         //  FileHandeling.Write_file();
-            // FileHandeling.Write_File2();
+            FileHandeling.Write_File2();
      //Read From Existing File
             // FileHandeling.Read_File();
 
-        FileHandeling.Copy_File();
+        // FileHandeling.Copy_File();
 
        
 }

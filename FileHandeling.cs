@@ -33,7 +33,7 @@ class FileHandeling{
 
     public static void Write_File2(){
         string File_Path=@"C:\Users\nachiketa.patel\Desktop\Nachiketa Git\FileHandeling\Sum_Of_Digit.txt";
-        using(StreamWriter SW=new StreamWriter(File_Path)){
+        using(StreamWriter SW=new StreamWriter(File_Path,true)){
             Console.Write("Enter Number :");
             int A=Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter Number :");
@@ -67,7 +67,7 @@ class FileHandeling{
     public static void Copy_File(){
         string Path=@"C:\Users\nachiketa.patel\Desktop\Nachiketa Git\FileHandeling\Sum_Of_Digit.txt";
         string New_Path=@"C:\Users\nachiketa.patel\Desktop\Nachiketa Git\FileHandeling\Backup_File\backup.txt";
-        File.Copy(Path,New_Path);
+        File.Copy(Path,New_Path,true);
         string Data=File.ReadAllText(New_Path);
         Console.WriteLine(Data);
     }
