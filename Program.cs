@@ -41,11 +41,19 @@ class Program
         
     //  ArrayList Example
 
-        ArrayList_Ex.GetList();
-        
+        //ArrayList_Ex.GetList();
+        //List.arraylist();
+    
+     //Crating New File Using FileStram.
+         
+        //   FileHandeling.Create_File();
+     //Write Into Existing File
+        //  FileHandeling.Write_file();
+            // FileHandeling.Write_File2();
+     //Read From Existing File
+            // FileHandeling.Read_File();
 
-
-        
+        FileHandeling.Copy_File();
 
        
 }
