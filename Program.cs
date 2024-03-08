@@ -90,7 +90,15 @@ public class Program
         // EventRaising e1 = new EventRaising();
         // e1.Dowork(5,"work compalete yet?");
 
-        Listprogram.CURDOperation();
+        // Listprogram.CURDOperation();
+        ArrayListProgram.arraylistoperation();
+        
+
+        // FileStreamProgram.filestreamreadwrite();
+
+        // StreamReaderAndWriter.streamreadandwrite();
+
+        StringReaderWriter.stringreadandwrite();
 
 
 
