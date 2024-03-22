@@ -4,6 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+       
+        Info info = new Info();
+        Iinfo iinfo = new Info();
+        info._name = "Kirtan";
+        info._address="valsad";
+
+        info.Name();
+
+    //     info.Name(iinfo);
+    //    System.Console.WriteLine();
     }
 }

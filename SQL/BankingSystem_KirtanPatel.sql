@@ -1,4 +1,4 @@
---create database Banking_System;
+﻿--create database Banking_System;
 
 
 --create table Customers(
@@ -182,6 +182,8 @@ select * from Transactions;
 select * from Employees;
 
 
+
+
 ----1
 --update Account set Account.Balance = Account.Balance + T.Amount from Transactions as T where Account.AccountId = T.AccountId and T.Type = 'deposit';
 
@@ -262,7 +264,94 @@ select * from Employees;
 
 --select C.Name, C.Address, C.Email, A.Account_Type, T.Type,T.Amount,T.Transaction_Date,E.Emp_Name,E.Department from (((Account As A INNER JOIN Customers as C ON C.CustomerId = A.CustomerId) INNER JOIN Transactions as T ON A.AccountId = T.AccountId ) INNER JOIN Employees as E ON T.EmployeeId = E.EmployeeId) where T.Type = 'deposit';
 
---select * from 
+
+
+select  top 2 Max(A.Balance) as maximum, A.Account_Type,C.Name from Customers as C inner join Account as A on C.CustomerId = A.CustomerId 
+where Account_Type = 'Saving' or Account_Type='current'
+Group by A.Account_Type,name
+order by maximum desc
+;
+
+select distinct top 3 Customers.name, Account.Account_Type,max(Account.Balance) as Maximum from Customers
+join Account on Customers.CustomerId=Account.CustomerId
+--where Account_Type ='saving'
+group by name,Account_Type
+order by Maximum desc
+
+select max(balance) from Account where Account_Type='saving'
+select max(balance) from Account where Account_Type='current'
+
+select Max(A.Balance), A.Account_Type  from Customers as C inner join Account as A on C.CustomerId = A.CustomerId Group by A.Account_Type having A.Account_Type = 'saving';
+
+Select C.Name, C.Address, A.Account_Type, A.Balance , C.Phone_Number , C.Email, T.Type, T.Amount,T.Transaction_Date from ((Customers as C inner Join  Account as A on C.CustomerId = A.CustomerId)inner join Transactions as T on A.AccountId = T.AccountId);
+
+Select C.Name, C.Address, A.Account_Type, A.Balance , C.Phone_Number , C.Email, T.Type, T.Amount,T.Transaction_Date from ((Customers as C left outer join  Account as A on C.CustomerId = A.CustomerId)left outer join Transactions as T on A.AccountId = T.AccountId);
+
+
+Select C.Name, C.Address, A.Account_Type, A.Balance , C.Phone_Number , C.Email, T.Type, T.Amount,T.Transaction_Date from ((Customers as C right outer join  Account as A on C.CustomerId = A.CustomerId)right outer join Transactions as T on A.AccountId = T.AccountId);
+
+Select C.Name, C.Address, A.Account_Type, A.Balance , C.Phone_Number , C.Email, T.Type, T.Amount,T.Transaction_Date from ((Customers as C full outer join  Account as A on C.CustomerId = A.CustomerId) full outer join Transactions as T on A.AccountId = T.AccountId)  where T.Amount IS  NULL;
+
+Select distinct (C.Name), C.Address, A.Account_Type, A.Balance , C.Phone_Number , C.Email, T.Type, T.Amount,T.Transaction_Date from ((Customers as C inner Join  Account as A on C.CustomerId = A.CustomerId)inner join Transactions as T on A.AccountId = T.AccountId);
+Select * from Customers;
+select * from Account;
+select * from Transactions;
+select * from Employees;
+
+create table Employees1 
+( EmployeeId int,
+Emp_Name varchar(50),
+Department varchar(50)
+);
+
+insert into Employees1 values(2029,'who','HR'),
+(2030,'this','Finance'),
+(2031,'her','Finance'),
+(2032,'his','marketing'),
+(2033,'it','HR');
+
+create index topresult on Customers (Phone_Number);
+drop index Customers.topresult;
+
+ALTER TABLE Customers​
+ADD fingerprint bit;
+
+
+ALTER TABLE Customers​
+DROP COLUMN fingerprint;
+
+
+ALTER TABLE Customers​
+ALTER COLUMN fingerprint varchar(50);
+
+create view [ABC] AS 
+select name, address, Phone_Number from Customers 
+where CustomerId >= 10;
+
+update ABC set name = 'kirtan' where Phone_Number = '5551234565';
+select * from ABC;
+
+begin transaction 
+
+	update Customers set Name='Nick' where CustomerId = 50;
+	update Customers set Name='Kirtan' where CustomerId = 49;
+	Commit transaction
+	
+	update Customers set Name='patel' where CustomerId = 50;
+	update Customers set Name='Kiasdasd' where CustomerId = 49;
+	rollback transaction
+
+
+Select * from Customers;
+select * from Account;
+select * from Employees; 
+select * from Transactions;
+
+
+
+
+
+
 
 
 
