@@ -1,5 +1,8 @@
 ﻿--create database Banking_System;
 
+ALTER DATABASE Banking_System MODIFY NAME = Banking_sbi;
+
+
 
 --create table Customers(
 --	CustomerId int PRIMARY KEY,
@@ -100,6 +103,9 @@
 --(1027,28,'saving',75000.00),
 --(1028,29,'current',70000.00),
 --(1029,30,'saving',7700.00);
+
+
+insert into Account (AccountId , Account_Type, Balance)values(1031,'saving',100000.00)
 
 
 
